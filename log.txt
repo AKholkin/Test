@@ -1,0 +1,37 @@
+aleksandr@aleksandr-X200MA:~/Test$ python test_with_root.py "password"
+INFO:root:Step 1
+INFO:root:Step 2
+INFO:root:client id and balance
+INFO:root:(3, 3.5)
+INFO:root:Step 3
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:requests.packages.urllib3.connectionpool:"POST /client/services HTTP/1.1" 200 110
+INFO:root:clients_services
+INFO:root:[u'Service #1']
+INFO:root:Step 4
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:requests.packages.urllib3.connectionpool:"GET /services HTTP/1.1" 200 422
+INFO:root:all_services
+INFO:root:[u'Service #1', u'Service #2', u'Service #3', u'Service #4', u'Service #5']
+INFO:root:Step 5
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:requests.packages.urllib3.connectionpool:"GET /services HTTP/1.1" 200 422
+INFO:root:service_id_and_cost
+INFO:root:[(2, 0.35)]
+INFO:root:Step 6
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:requests.packages.urllib3.connectionpool:"POST /client/add_service HTTP/1.1" 202 10
+INFO:root:answer.status_code
+INFO:root:202
+INFO:root:Step 7
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:requests.packages.urllib3.connectionpool:"POST /client/services HTTP/1.1" 200 110
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:requests.packages.urllib3.connectionpool:"POST /client/services HTTP/1.1" 200 110
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:requests.packages.urllib3.connectionpool:"POST /client/services HTTP/1.1" 200 188
+INFO:root:service was added
+INFO:root:Step 8
+INFO:root:Step 9
+INFO:root:Pass
+Test passed
